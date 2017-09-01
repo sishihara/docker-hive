@@ -1,17 +1,10 @@
 FROM openjdk:alpine
 MAINTAINER Shoma Ishihara <sishihara@iij.ad.jp>
 
-ARG http_proxy
-ARG https_proxy
 ARG hadoop_version=2.8.0
 ARG hive_version=2.3.0
 ARG awssdk_version=1.10.64
 ARG jdbc_mysql_version=5.1.43
-
-ENV HTTP_PROXY ${http_proxy}
-ENV HTTPS_PROXY ${https_proxy}
-ENV http_proxy ${http_proxy}
-ENV https_proxy ${https_proxy}
 
 ENV HADOOP_VERSION ${hadoop_version}
 ENV HADOOP_HOME /opt/hadoop-${hadoop_version}
